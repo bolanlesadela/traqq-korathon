@@ -47,6 +47,14 @@ app.use('/api/analytics', analyticsRouter);
 app.use('/api/insights',  insightsRouter);
 app.use('/pay',           attributionRouter);
 
+app.get("/", (req, res) => {
+  res.json({
+    success: true,
+    message: "Traqq API is running ✨"
+  });
+});
+
+
 app.use((req, res) => {
   res.status(404).json({ success: false, message: `Route ${req.method} ${req.path} not found` });
 });

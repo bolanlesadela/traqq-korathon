@@ -38,11 +38,3 @@ process.on('unhandledRejection', (reason) => {
   console.error('Unhandled Rejection:', reason);
   server.close(() => process.exit(1));
 });
-
-
-app.get("/", (req, res) => {
-  res.json({
-    success: true,
-    message: "Traqq API is running 🚀"
-  });
-});
